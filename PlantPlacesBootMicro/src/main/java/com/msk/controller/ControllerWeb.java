@@ -13,7 +13,7 @@ public class ControllerWeb {
 	
 	@GetMapping("/")
 	public String index() {
-		return "/";
+		return "index";
 	}
 	
 }
