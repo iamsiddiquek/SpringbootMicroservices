@@ -19,36 +19,44 @@
 		
 		<label for="name">Name: </label> 
 		<input type="text" th:field="*{name}" />
+		<span class="validation-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
 		<br /> 
 		
 		<label for="street">Street address: </label> 
 		<input type="text" th:field="*{street}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('street')}" th:errors="*{street}"> Street Not Valid</span>
 		<br /> 
 
 		<label for="city">City: </label> 
 		<input type="text" th:field="*{city}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('city')}" th:errors="*{city}"> City is not valid</span>
 		<br /> 
 		
 		<label for="state">State: </label> 
 		<input type="text" th:field="*{state}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('state')}" th:errors="*{state}">invalid State</span>
 		<br /> 
 
 		<label for="zip">Zip code: </label> 
 		<input type="text" th:field="*{zip}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('zip')}" th:errors="*{zip}"> Zip Code Not valid</span>
 		<br />
 
 		<h3>Here's how I'll pay...</h3>
 		
 		<label for="ccNumber">Credit Card #: </label> 
 		<input type="text" th:field="*{ccNumber}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('ccNumber')}" th:errors="*{ccNumber}"> Credit card Number not valid </span>
 		<br /> 
 
 		<label for="ccExpiration">Expiration: </label> 
 		<input type="text" th:field="*{ccExpiration}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('ccExpiration')}" th:errors="*{ccExpiration}">Credit Card is Expired or Invalid</span>
 		<br /> 
 
 		<label for="ccCVV">CVV: </label> 
 		<input type="text" th:field="*{ccCVV}" /> 
+		<span class="validation-error" th:if="${#fields.hasErrors('ccCVV')}" th:errors="*{ccCVV}"> Credit Card, Card Verification Value</span>
 		<br />
 
 		<input type="submit" value="Submit order" />
