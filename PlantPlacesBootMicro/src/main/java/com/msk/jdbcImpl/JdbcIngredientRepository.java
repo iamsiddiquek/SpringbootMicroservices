@@ -1,4 +1,4 @@
-package com.msk.dataImpl;
+package com.msk.jdbcImpl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

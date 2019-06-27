@@ -1,4 +1,4 @@
-package com.msk.dataImpl;
+package com.msk.jdbcImpl;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import com.msk.data.PersonRepository;
 
 
 @Repository
-public class PersonImpl implements PersonRepository {
+public class PersonJdbcImpl implements PersonRepository {
 	
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
