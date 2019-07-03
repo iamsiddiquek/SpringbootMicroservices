@@ -23,5 +23,19 @@ public class CourseRepository {
 		return em.find(Course.class, id);
 	}
 	
+	public void save(Course course) {
+		em.merge(course);
+	}
+	
+	public void update(Course course) {
+		em.merge(course);
+	}
+	
+	public void delete(int id) {
+		em.remove(id);
+	}
+	
+	
+	
 	
 }

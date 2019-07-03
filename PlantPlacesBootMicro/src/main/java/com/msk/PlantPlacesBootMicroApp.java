@@ -20,13 +20,9 @@ public class PlantPlacesBootMicroApp implements CommandLineRunner{
 	
 	@Autowired
 	PersonJpaImpl personJpa;
-	
-	
+		
 	@Autowired
 	private CourseRepository courseRepository;
-	
-	
-	
 	
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
