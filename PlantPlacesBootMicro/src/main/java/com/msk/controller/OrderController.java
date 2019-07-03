@@ -24,13 +24,13 @@ public class OrderController {
 		return "orderForm";
 	}
 
-	
+	// @Valid annotation will not proceed until it is not validated and for validation will go to Order Model class
 	@PostMapping
 	public String processOrder(@Valid Order order, Errors errors) {
 		if(errors.hasErrors()) {
 			return "/orderForm";
 		}
-	 log.info("Order submitted: " + order);
+	 log.info("Order submitted: -> {} " + order);
 	 return "redirect:/";
 	}
 	
